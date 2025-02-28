@@ -8,46 +8,59 @@ from ShoppingCart import ShoppingCart
 class TestShoppingCart(unittest.TestCase):
     
     def setUp(self):
+        print("* setUp()")
         self.cart = ShoppingCart()
 
     def test_add_product(self):
+        print("** test_add_product()")
         self.assertTrue(self.cart.add_product("produkt", 3000, 1))
         self.assertIn("produkt", self.cart.get_products())
     
     def test_remove_product(self):
+        print("** test_remove_product()")
         self.cart.add_product("produkt", 3000, 1)
         self.assertTrue(self.cart.remove_product("produkt"))
         self.assertNotIn("produkt", self.cart.get_products())
     
     def test_update_quantity(self):
+        print("** test_update_quantity()")
         self.cart.add_product("produkt", 3000, 1)
         self.assertTrue(self.cart.update_quantity("produkt", 2))
         self.assertEqual(self.cart.count_products(), 2)
     
     def test_get_products(self):
+        print("** test_get_products()")
         self.cart.add_product("produkt", 3000, 1)
         self.cart.add_product("produkt2", 100, 2)
         self.assertEqual(sorted(self.cart.get_products()), ["produkt", "produkt2"])
     
     def test_count_products(self):
+        print("** test_count_products()")
         self.cart.add_product("produkt", 3000, 1)
         self.cart.add_product("produkt2", 100, 2)
         self.assertEqual(self.cart.count_products(), 3)
     
     def test_get_total_price(self):
+        print("** test_get_total_price()")
         self.cart.add_product("produkt", 3000, 1)
         self.cart.add_product("produkt2", 100, 2)
         self.assertEqual(self.cart.get_total_price(), 3200)
     
     def test_apply_discount_code(self):
+        print("** test_apply_discount_code()")
         self.cart.add_product("produkt", 3000, 1)
         self.assertTrue(self.cart.apply_discount_code("DISCOUNT10"))
         self.assertEqual(self.cart.get_total_price(), 2700)
     
     def test_checkout(self):
+        print("** test_checkout()")
         self.cart.add_product("produkt", 3000, 1)
         self.assertTrue(self.cart.checkout())
         self.assertEqual(self.cart.count_products(), 0)
+
+    def tearDown(self):
+        print("*** tearDown()")
+        self.calc = None
 
 if __name__ == "__main__":
     unittest.main()
