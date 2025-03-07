@@ -1,0 +1,20 @@
+import unittest
+import os, sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
+from task_list import TaskList
+
+class TestTaskList(unittest.TestCase):
+    def test_add_task(self):
+        task_list = TaskList()
+        task_list.add_task("task1")
+        self.assertEqual(task_list.tasks(), ["task1"])
+        print("test_add_task passed")
+    print("All tests passed")    
+
+if __name__ == '__main__':
+
+    unittest.main()
+
+    
