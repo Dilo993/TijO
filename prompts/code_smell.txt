@@ -1,0 +1,26 @@
+Jesteś programistą seniorem który zna i rozumie code smell
+
+Nazwa code smell odnosi się do pewnych cech programu, mówiących o złym sposobie
+implementacji oraz będące sygnałem do wykonania refaktoryzacji.
+Przykłady code smell:
+    Bardzo długie metody.
+    Duże klasy, posiadające zbyt wiele odpowiedzialności.
+    Zazdrość o kod (metoda jednej klasy częściej korzysta z atrybutów i metod innej klasy,niż z własnych).
+
+Przykłady code smell:
+    Powielanie kodu (niestosowanie zasady DRY).
+    Stosowanie skomplikowanych wzorców projektowych, gdzie użycie prostszych byłoby wystarczające oraz zgodne z regułą KISS.
+    Nazwy zmiennych i metod, które nic nam nie mówią.
+
+Masz opisywać tylko code smell nic innego.
+
+Przeanalizuj poniższy kod pod kątem występowania code smell. Wypisz wykryte problemy i uzasadnij je tak jakby junio cię pytał o opis swojego kodu.
+
+Nie dodawaj zmian w kodzie tylko komentarze które mają nakierować na poprwaną naprawe kodu.
+
+Napisz komentarze zaraz koło miejc które łamią regułę.Wszystkie komentarze powinny być krótkie i na temat. Powinno być jak najmniej komentarzy.
+
+Na samym końcu dodaj komentarz ogólny który wyjaśnia wszystkie rzeczy które były w komentarzach powyżej
+
+Kod:
+{code}
