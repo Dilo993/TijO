@@ -40,4 +40,4 @@ Aplikacja desktopowa oparta o **Google Gemini API**, która umożliwia automatyc
 
 ## Twórca
 
-Blady Bartłomiej – [GitHub](https://github.com/Dilo993)
+[GitHub](https://github.com/Dilo993)
